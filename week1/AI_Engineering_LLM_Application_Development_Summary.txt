@@ -1,0 +1,386 @@
+AI ENGINEERING — LLM / GENERATIVE AI APPLICATION DEVELOPMENT
+===============================================================
+
+WHAT AM I STUDYING?
+-------------------
+You are learning AI Engineering, specifically:
+
+LLM / Generative AI Application Development
+
+Your current project is an:
+AI-powered Resume Screening / Resume Ranking System.
+
+The basic idea is:
+
+Job Description + Multiple Resumes
+                ↓
+              LLM
+                ↓
+        Understand the data
+                ↓
+       Compare Job + Resume
+                ↓
+           Give a score
+                ↓
+        Rank candidates
+
+
+1. WHAT IS AN LLM?
+------------------
+LLM = Large Language Model.
+
+It is an AI model that can understand and generate human language.
+
+Examples:
+- GPT
+- Gemini
+- Claude
+- Llama
+- Mistral
+
+Example:
+
+Resume + Question
+       ↓
+      LLM
+       ↓
+    Answer
+
+
+2. WHAT IS GENERATIVE AI?
+-------------------------
+Generative AI means AI that can generate new content.
+
+It can generate:
+- Text
+- Code
+- Summaries
+- JSON
+- Images
+- Other content
+
+Example:
+
+You: "Write Java code to reverse a string."
+                    ↓
+                   AI
+                    ↓
+              Java code generated
+
+
+3. WHAT IS AN API?
+------------------
+API = Application Programming Interface.
+
+In simple words:
+
+An API allows your program to communicate with another software/service.
+
+Your Python Program
+        ↓
+       API
+        ↓
+      LLM
+        ↓
+      API
+        ↓
+Your Python Program
+
+Code such as:
+
+response = client.chat.completions.create(...)
+
+means your Python program is asking the AI model for a response.
+
+
+4. HOW YOUR RESUME PROJECT WORKS
+--------------------------------
+
+PART 1 — UNDERSTAND THE JOB
+---------------------------
+You have a job description.
+
+You send it to the LLM.
+
+The LLM extracts structured information such as:
+- Role
+- Required skills
+- Preferred skills
+- Experience
+- Education
+- Responsibilities
+
+Flow:
+
+Job Description
+      ↓
+     LLM
+      ↓
+Structured Job
+
+
+PART 2 — UNDERSTAND EACH RESUME
+--------------------------------
+Your resumes are stored in a folder:
+
+resumes/
+    resume1.pdf
+    resume2.pdf
+    resume3.docx
+    ...
+
+Python finds the files and reads them.
+
+Then the resume text is sent to the LLM.
+
+The LLM extracts:
+- Name
+- Email
+- Phone
+- Experience
+- Skills
+- Education
+- Projects
+- Certifications
+
+Flow:
+
+Resume PDF/DOCX
+      ↓
+Python extracts text
+      ↓
+     LLM
+      ↓
+Structured Resume
+
+
+PART 3 — COMPARE JOB AND RESUME
+--------------------------------
+Your code does:
+
+result = final_score(job, parsed_resume)
+
+The LLM receives:
+
+JOB DESCRIPTION
+       +
+CANDIDATE RESUME
+       ↓
+      LLM
+       ↓
+Score + Details
+
+The AI checks:
+- Matching skills
+- Missing important skills
+- Whether experience requirement is met
+- Overall match percentage
+- Final verdict
+
+
+PART 4 — RANK CANDIDATES
+------------------------
+The score for every candidate is stored.
+
+Example:
+
+Kshitij  → 91
+Priya    → 88
+Rahul    → 82
+Aman     → 67
+
+Python sorts them from highest to lowest:
+
+Kshitij  → 91
+Priya    → 88
+Rahul    → 82
+Aman     → 67
+
+Then your program can select the TOP 2 and LOWEST 2.
+
+
+5. WHY USE GPT/GEMINI IF THEY ALREADY EXIST?
+---------------------------------------------
+You are NOT building GPT or Gemini yourself.
+
+You are using an existing LLM inside your own software.
+
+Think:
+
+GPT / Gemini / Claude
+        ↓
+      ENGINE
+        ↓
+ Your Application
+
+The LLM is like the engine/brain.
+
+Your Python program is the application built around it.
+
+
+6. "BUT I CAN UPLOAD ALL RESUMES TO CHATGPT AT ONCE!"
+-----------------------------------------------------
+YES — you can.
+
+You can upload many resumes to ChatGPT and give one prompt:
+
+"Compare all these resumes against this Amazon SDE job description and rank them."
+
+ChatGPT can perform the analysis.
+
+So your Python project is NOT useful because ChatGPT cannot do the task.
+
+The important difference is AUTOMATION AND CONTROL.
+
+
+7. CHATGPT APP VS YOUR PYTHON APPLICATION
+------------------------------------------
+
+CHATGPT MANUALLY:
+
+You
+ ↓
+Upload resumes
+ ↓
+Give prompt
+ ↓
+ChatGPT analyzes
+ ↓
+Read result
+
+You control the workflow.
+
+
+YOUR PYTHON APPLICATION:
+
+Your Program
+      ↓
+Find resumes automatically
+      ↓
+Read PDF/DOCX automatically
+      ↓
+Send to LLM automatically
+      ↓
+Get structured JSON
+      ↓
+Score candidates
+      ↓
+Store results
+      ↓
+Sort candidates
+      ↓
+Generate final output
+
+The computer controls the workflow.
+
+
+8. WHY WOULD A COMPANY NEED THIS?
+----------------------------------
+Imagine a company receives:
+
+10 resumes       → easy manually
+100 resumes      → annoying
+1,000 resumes    → difficult
+10,000 resumes   → automation is useful
+
+Instead of an employee repeatedly doing:
+
+Resume → ChatGPT
+Resume → ChatGPT
+Resume → ChatGPT
+...
+
+A company can build:
+
+Website
+   ↓
+Resume uploaded
+   ↓
+Backend
+   ↓
+LLM
+   ↓
+Score
+   ↓
+Database
+   ↓
+HR Dashboard
+
+The process can happen automatically.
+
+
+9. WHAT ARE YOU ACTUALLY LEARNING?
+-----------------------------------
+You are combining:
+
+Python
+  +
+LLM
+  +
+API
+  +
+Prompt Engineering
+  +
+JSON
+  +
+Pydantic
+  +
+PDF/DOCX Processing
+  +
+Automation
+  +
+Data Processing
+
+This is the foundation of:
+
+LLM Application Development
+and
+AI Engineering
+
+
+10. THE MOST IMPORTANT CONCEPT
+------------------------------
+Do NOT think:
+
+"I am making another ChatGPT."
+
+Instead think:
+
+"I am learning how to take an existing AI model and build useful software and automation around it."
+
+
+ONE-LINE SUMMARY
+----------------
+ChatGPT is an AI tool you can use manually.
+
+LLM Application Development is about building your own software that uses an LLM automatically as one part of the application.
+
+Your current project is:
+
+"A Python application that uses an LLM API to understand job descriptions and resumes, compare them, score candidates, and rank them automatically."
+
+
+COMPLETE FLOW
+-------------
+
+                    JOB DESCRIPTION
+                           ↓
+                         LLM
+                           ↓
+                    Structured Job
+                           │
+                           │
+                           ↓
+PDF/DOCX → Python → Resume Text → LLM
+                                      ↓
+                              Structured Resume
+                                      ↓
+                              Compare Job + Resume
+                                      ↓
+                                   Score
+                                      ↓
+                              Store Results
+                                      ↓
+                              Sort Candidates
+                                      ↓
+                              TOP CANDIDATES
